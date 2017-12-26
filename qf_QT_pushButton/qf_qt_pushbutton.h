@@ -14,6 +14,17 @@ public:
     void qf_setBackgroundColor(const QString &color);
     void qf_setTextColor(const QString &color);
 
+protected:
+    /* use middle mouse button to move button */
+    void mousePressEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+
+private:
+    /* for middle mouse button to move button */
+    bool midBtnPressed;
+    QPoint m_press;
+    QPoint m_move;
 };
 
 #endif // QF_QT_PUSHBUTTON_H
