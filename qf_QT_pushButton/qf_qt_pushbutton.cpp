@@ -71,3 +71,28 @@ void qf_QT_pushButton::mouseReleaseEvent(QMouseEvent *event)
     }
 }
 
+void qf_QT_pushButton::wheelEvent(QWheelEvent * event)
+{
+    if (ctlKeyPressed) {
+        QPoint numStep = event->angleDelta() / 8 /15;
+        QSize size = this->size();
+        size.setWidth(size.width() + numStep.ry()*3);
+        this->resize(size);
+    }
+    qDebug() << "qingfeng qwheel event";
+}
+
+void qf_QT_pushButton::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Control) {
+        ctlKeyPressed = true;
+    }
+    qDebug() << "key pressed";
+}
+
+void qf_QT_pushButton::keyReleaseEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Control) {
+        ctlKeyPressed = false;
+    }
+}

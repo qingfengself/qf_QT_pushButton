@@ -20,11 +20,19 @@ protected:
     void mouseMoveEvent(QMouseEvent *event);
     void mouseReleaseEvent(QMouseEvent *event);
 
+    /* for use ctrl+wheel to resize button */
+    void wheelEvent(QWheelEvent * event);
+    void keyPressEvent(QKeyEvent *event);
+    void keyReleaseEvent(QKeyEvent *event);
+
 private:
     /* for middle mouse button to move button */
     bool midBtnPressed;
     QPoint m_press;
     QPoint m_move;
+
+    /* for use ctrl+wheel to resize button */
+    bool ctlKeyPressed;
 };
 
 #endif // QF_QT_PUSHBUTTON_H
