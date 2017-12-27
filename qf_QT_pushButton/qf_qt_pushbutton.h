@@ -33,6 +33,9 @@ private:
 
     /* for use ctrl+wheel to resize button */
     bool ctlKeyPressed;
+
+    /* for use ctrl+left mouse button to resize button */
+    bool leftBtnPressed;
 };
 
 #endif // QF_QT_PUSHBUTTON_H
