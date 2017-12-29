@@ -1,6 +1,12 @@
 #ifndef QF_QT_PUSHBUTTON_H
 #define QF_QT_PUSHBUTTON_H
 
+/*****************************************************************/
+/****** uage *****************************************************
+** 1. resize : ctrl + wheel
+** 2. resize : ctrl + left mouse press
+** 3. move   ：middle mouse press
+*****************************************************************/
 #include <QPushButton>
 
 class qf_QT_pushButton : public QPushButton

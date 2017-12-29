@@ -22,7 +22,7 @@ void MainWindow::init_my_button(void)
     test_btn->qf_setSize(100, 20);
     test_btn->qf_setPosition(20, 20);
     test_btn->qf_setText("hello World");
-    test_btn->qf_setBackgroundColor("red");
-    test_btn->qf_setTextColor("blue");
+    //test_btn->qf_setBackgroundColor("red");
+    //test_btn->qf_setTextColor("blue");
     test_btn->show();
 }
